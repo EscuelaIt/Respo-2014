@@ -1,0 +1,189 @@
+<html><head><style type="text/css"><meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+
+
+body 
+{
+    margin: 6px;
+    
+    max-width: 100%; /* fix our max width to 100% of our containing frame */
+    word-wrap: break-word; /* ok to break words if text wrap is needed */
+    
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    
+    font-family: arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+    
+    line-height: 2px;
+}
+
+.msg_entry 
+{
+	display: block;
+	font-size: 14px;
+	margin-bottom: 6px;
+	
+	/* webkit extension for rounded boxes, ok if it doesn't work */
+	-webkit-border-radius: 3px;
+	
+	/* gecko extension for rounded boxes, ok if it doesn't work */
+	-moz-border-radius: 3px;
+	
+	/* CCS3 rounded boxes, ok if it doesn't work */
+	border-radius: 3px;
+	
+	border-width: 1px;
+	border-style: solid;
+    
+    margin: 0px 0px;
+	
+	/* webkit extension for shadows, ok if it doesn't work */
+	-webkit-box-shadow: rgba(0, 0, 0, .5) 0px 1px 2px;
+}
+
+.msg_entry h1 
+{
+	/* webkit extension for rounded boxes, ok if it doesn't work */
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    
+    /* gecko extension for rounded boxes, ok if it doesn't work */
+    -moz-border-radius-bottomright: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    
+    /* CCS3 rounded boxes, ok if it doesn't work */
+    -border-bottom-right-radius: 0px;
+    -border-bottom-left-radius: 0px;
+
+    background-color: transparent;
+    
+    margin: 2px 0px;
+    padding: 0px 6px;
+    line-height: 100%;
+    
+    font-style: normal;
+    font-weight: normal;
+    font-size: 100%;
+}
+
+.msg_entry p 
+{
+	/* webkit extension for rounded boxes */
+    -webkit-border-top-right-radius: 0px;
+    -webkit-border-top-left-radius: 0px;
+    
+    /* gecko extension for rounded boxes */
+    -moz-border-radius-topright: 0px;
+    -moz-border-radius-topleft: 0px;
+    
+    /* CCS3 rounded boxes */
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    
+    background-color: rgb(255, 255, 255); /* for those that don't yet support rgba make sure we are at least white */
+    background-color: rgba(255, 255, 255, 0.75); /* translucent white so we get the tint of our background */
+    
+    padding: 2px 6px;
+    margin: 0px 0px;
+    line-height: 100%;
+}
+
+.msg_entry.chat.welcome, .msg_entry.chat.message
+{
+	background-color: rgb(217, 240, 211);   /* light green */
+	border-color: rgb(217, 240, 211);       /* light green */
+}
+
+.msg_entry.chat.welcome p, .msg_entry.chat.message p
+{
+    background-color: transparent;
+}
+
+.msg_entry.chat.incoming, .msg_entry.chat.outgoing
+{
+	background-color: rgb(216, 237, 254);   /* light blue */
+	border-color: rgb(216, 237, 254);       /* light blue */
+}
+
+.msg_entry.chat.incoming h1, .msg_entry.chat.outgoing h1
+{
+	color: rgb(2, 101, 203);                /* blue */
+}
+
+.msg_entry.chat.incoming.to_all, .msg_entry.chat.outgoing.to_all
+{
+	background-color: rgb(217, 240, 211);   /* light green */
+	border-color: rgb(217, 240, 211);       /* light green */
+}
+
+.msg_entry.chat.incoming.to_all h1, .msg_entry.chat.outgoing.to_all h1
+{
+	color: rgb(0, 102, 2);                  /* green */
+}
+
+.msg_entry.chat.incoming.private, .msg_entry.chat.outgoing.private 
+{
+	background-color: rgb(254, 208, 208);   /* light red */
+	border-color: rgb(254, 208, 208);       /* light red */
+}
+
+.msg_entry.chat.incoming.private h1, .msg_entry.chat.outgoing.private h1 
+{
+	color: rgb(153, 1, 0);                  /* red */
+}
+
+.msg_entry.questionanswer.remote
+{
+	background-color: rgb(217, 240, 211);   /* light green */
+	border-color: rgb(217, 240, 211);       /* light green */
+}
+
+.msg_entry.questionanswer.remote label
+{
+    color: rgb(0, 102, 2);                  /* green */
+    text-align: right;
+}
+
+.msg_entry.questionanswer.remote h1
+{
+    color: rgb(0, 102, 2);                  /* green */
+}
+
+.msg_entry.questionanswer.local.public
+{
+	background-color: rgb(216, 237, 255);   /* light blue */
+	border-color: rgb(216, 237, 255);       /* light blue */
+}
+
+.msg_entry.questionanswer.local.public label
+{
+    color: rgb(2, 101, 203);                /* blue */
+}
+
+.msg_entry.questionanswer.local.private
+{
+	background-color: rgb(254, 208, 208);   /* light red */
+	border-color: rgb(254, 208, 208);       /* light red */
+}
+
+.msg_entry.questionanswer.local.private label
+{
+    color: rgb(153, 1, 0);                  /* red */
+}
+
+.msg_entry.questionanswer.local.noanswer
+{
+    background-color: rgb(238, 238, 238);   /* light gray */
+    border-color: rgb(238, 238, 238);       /* light gray */
+    color: rgb(136, 136, 136);              /* gray */
+}
+
+.msg_entry.questionanswer.local.noanswer p
+{
+    background-color: transparent;
+}
+
+</style>
+</head><body><div class="msg_entry chat outgoing to_all"><h1>Para Todos:</h1><p><a href="https://www.dropbox.com/sh/dnl6607wkkb3es3/AAClOKf_WdedBPX4AcUdUwjGa?dl=0">https://www.dropbox.com/sh/dnl6607wkkb3es3/AAClOKf_WdedBPX4AcUdUwjGa?dl=0</a></p></div><br><div class="msg_entry chat outgoing to_all"><h1>Para Todos:</h1><p><a href="http://codepen.io/Wakkos/pen/xAhdq">http://codepen.io/Wakkos/pen/xAhdq</a></p></div><br><div class="msg_entry chat outgoing to_all"><h1>Para Todos:</h1><p><a href="http://coolvillage.es/propiedades-de-los-mediaqueries/">http://coolvillage.es/propiedades-de-los-mediaqueries/</a></p></div><br><div class="msg_entry chat outgoing to_all"><h1>Para Todos:</h1><p><a href="http://css-tricks.com/snippets/css/media-queries-for-standard-devices/">http://css-tricks.com/snippets/css/media-queries-for-standard-devices/</a></p></div><br><div class="msg_entry chat outgoing to_all"><h1>Para Todos:</h1><p><a href="https://github.com/filamentgroup/tablesaw">https://github.com/filamentgroup/tablesaw</a></p></div><br><div class="msg_entry chat incoming private"><h1>Judith Neumann (PRIVADO):</h1><p>be happy jejeje</p></div></body></html>
