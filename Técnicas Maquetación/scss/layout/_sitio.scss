@@ -1,0 +1,111 @@
+
+
+
+
+
+/*------------------------------------*\
+    $SITIO
+\*------------------------------------*/
+
+
+@-webkit-viewport {
+	width : device-width;
+}
+
+@-moz-viewport {
+	width : device-width;
+}
+
+@-ms-viewport {
+	width : device-width;
+}
+
+@-o-viewport {
+	width : device-width;
+}
+
+@viewport {
+	width : device-width;
+}
+
+html {
+	background : $background;
+	font-size : 100%;
+	-webkit-overflow-scrolling : touch;
+	-webkit-tap-highlight-color : lighten($basecolor, 75%);
+	-webkit-text-size-adjust : 100%;
+	-ms-text-size-adjust : 100%;
+}
+
+body {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	background-color : transparent;
+	font-family : $basefont;
+	@include font-size();
+	line-height : $baselineheight;
+	color : $textcolor;
+}
+
+/**
+* A partir de aquí es donde debes escribir los estilos de posicionamiento
+* y detalles que forman tu web. Disfruta!
+*/
+
+
+/* 
+* Listas largas
+ */
+
+ .long-list {
+ 	list-style-type: none;
+ 	@include vendor(column-count,1);
+
+ 	@include media-query-bp($bp2) {
+ 		@include vendor(column-count,2);
+ 	}
+ 	@include media-query-bp($bp3) {
+ 		@include vendor(column-count,3);
+ 	}
+ 	@include media-query-bp($bp5) {
+ 		@include vendor(column-count,4);
+ 	}
+ }
+	.long-list__item {
+		text-align: center;
+	}
+
+/* 
+ * MAQUETACIÓN
+ */
+
+ .main {
+ 	padding: $baseline $gutterwidth;
+ 	display: table;
+ 	caption-side: top;
+ 	width: 100%;
+ 	@include media-query-bp($bp3) {
+			caption-side: bottom;
+ 		}
+ }
+ 	.main__section {
+ 		display: table-row;
+ 		@include media-query-bp($bp3) {
+			display: table-cell;
+			width:100%;
+			padding-right: ($gutterwidth / 2);
+			border-right: 1px solid $lightgrey;
+ 		}
+ 	}
+ 	aside {
+ 		display: table-row;
+ 		@include media-query-bp($bp3) {
+			display: table-cell;
+			width:100px;
+			padding-left: ($gutterwidth / 2);
+ 		}
+ 	}
+ 	.footer--home {
+ 		display: table-caption;
+ 	}
